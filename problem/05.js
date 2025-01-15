@@ -7,14 +7,13 @@
  *
  */
 
-function getBrand() {
-    return this.brand;
-}
-
 const car = {
     brand: 'Toyota',
+    getBrand(){
+      return this.brand;
+    }
 };
 
-let bound = getBrand.bind(car);
+let bound = car.getBrand.bind(car);
 
 export { car, bound };
